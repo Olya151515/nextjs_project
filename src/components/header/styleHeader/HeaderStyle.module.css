@@ -5,11 +5,14 @@
 }
 .headerStyle{
     display: flex;
-    background-color: #150f0f;
-    height: 7vh;
+    background-color: black;
+    height: 12vh;
     margin-bottom: 30px;
+    flex-direction: column;
 }
-
+.liWithIconUser{
+    display: flex;
+}
 .styleImgUser{
     margin: 20px 10px 10px 15vw;
 }

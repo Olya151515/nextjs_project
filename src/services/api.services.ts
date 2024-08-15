@@ -4,6 +4,7 @@ import {GenresResponse} from "@/models/genres/GenresResponse";
 import {IGenre} from "@/models/genres/IGenre";
 import {urlsApi} from "@/constants/urls/urls";
 import {PeopleResponse} from "@/models/people/PeopleResponse";
+import {PosterResponse} from "@/models/poster/PosterResponse";
 
 const myHeaders = {
     accept:' application/json',
@@ -32,6 +33,10 @@ const moviesService ={
     getPopularMovies: async ():Promise<MovieResponse> =>{
         return  await fetch(urlsApi.movies.getPopularMovies ,
             {headers:myHeaders})
+            .then(value => value.json());
+    },
+    getSimilarMoviesById: async (id:number):Promise<MovieResponse> =>{
+        return await fetch('https://api.themoviedb.org/3/movie/'+id+'/similar',{headers:myHeaders})
             .then(value => value.json());
     }
 }
