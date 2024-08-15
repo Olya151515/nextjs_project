@@ -1,0 +1,23 @@
+
+.headerStyle{
+    background-color: #150f0f;
+    height: 10vh;
+    margin:0;
+}
+
+.ulStyle{
+    display: flex;
+    margin-left: 30vw ;
+}
+.liStyle{
+    margin:10px;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+.liStyle:hover{
+    color: red;
+}
+.inputStyle{
+    height: 4vh;
+}

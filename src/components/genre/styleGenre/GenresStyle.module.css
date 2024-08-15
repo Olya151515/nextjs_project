@@ -1,0 +1,14 @@
+.body{
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+}
+
+.oneGenre{
+    margin: 5px;
+}
+
+.styleLinkGenre{
+    color: white;
+    text-decoration: none;
+}

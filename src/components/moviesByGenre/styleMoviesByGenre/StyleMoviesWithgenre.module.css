@@ -1,0 +1,24 @@
+.mainDiv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.oneCard{
+    width: 17vw;
+    display: flex;
+    flex-direction: column;
+    height: 30vw;
+    color: white;
+    margin: 10px;
+}
+.img{
+    width: 200px;
+}
+.titleDiv{
+    display: flex;
+    justify-content: center;
+}
+.stylePagination{
+    display: flex;
+    justify-content: center;
+}
