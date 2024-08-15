@@ -1,10 +1,18 @@
-
+.active{
+    color: red;
+    text-decoration: none;
+    list-style: none;
+}
 .headerStyle{
+    display: flex;
     background-color: #150f0f;
-    height: 10vh;
-    margin:0;
+    height: 7vh;
+    margin-bottom: 30px;
 }
 
+.styleImgUser{
+    margin: 20px 10px 10px 15vw;
+}
 .ulStyle{
     display: flex;
     margin-left: 30vw ;
@@ -14,10 +22,25 @@
     color: white;
     text-decoration: none;
     list-style: none;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 .liStyle:hover{
     color: red;
 }
 .inputStyle{
     height: 4vh;
+    background-color: black;
+    border: none;
+    color: white;
+}
+
+.inputBox{
+    display: flex;
+}
+.searchIcon{
+    width: 10px;
+    height: 10px;
 }

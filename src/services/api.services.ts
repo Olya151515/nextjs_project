@@ -3,6 +3,7 @@ import {IMovie} from "@/models/movies/IMovie";
 import {GenresResponse} from "@/models/genres/GenresResponse";
 import {IGenre} from "@/models/genres/IGenre";
 import {urlsApi} from "@/constants/urls/urls";
+import {PeopleResponse} from "@/models/people/PeopleResponse";
 
 const myHeaders = {
     accept:' application/json',
@@ -27,6 +28,11 @@ const moviesService ={
         return await fetch(urlsApi.movies.getSearchedMovies +'?query='+query ,
             {headers:myHeaders})
             .then(value => value.json());
+    },
+    getPopularMovies: async ():Promise<MovieResponse> =>{
+        return  await fetch(urlsApi.movies.getPopularMovies ,
+            {headers:myHeaders})
+            .then(value => value.json());
     }
 }
 const  genres ={
@@ -36,9 +42,16 @@ const  genres ={
             .then(value => value.json());
         return response.genres
     }
-
+}
+const peopleServices ={
+    getPopularPeople: async ():Promise<PeopleResponse> =>{
+        return await fetch('https://api.themoviedb.org/3/person/popular',{
+            headers:myHeaders})
+            .then(value => value.json())
+    }
 }
 export {
     moviesService,
-    genres
+    genres,
+    peopleServices
 }

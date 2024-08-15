@@ -18,6 +18,7 @@ const MoviesByGenreComponent:FC<IProps> = ({movies}) => {
 
     return (
         <div >
+
             <div className={styles.mainDiv}>
                 {movies?.map(movie => <MovieByGenreComponent key={movie.id} movie={movie}/>)}
             </div>

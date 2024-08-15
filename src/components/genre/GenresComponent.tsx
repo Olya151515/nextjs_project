@@ -2,18 +2,18 @@ import React, {FC} from 'react';
 import {IGenre} from "@/models/genres/IGenre";
 import GenreComponent from "@/components/genre/GenreComponent";
 import styles from "/src/components/genre/styleGenre/GenresStyle.module.css";
-import {IMovie} from "@/models/movies/IMovie";
+
 type IProps = {
     genres:IGenre[],
     page:string,
-    movies:IMovie[]
+    id:number
 }
 
-const GenresComponent:FC<IProps> = ({genres,page,movies}) => {
+const GenresComponent:FC<IProps> = ({genres,page,id}) => {
     return (
         <div className={styles.body}>
             {
-                genres.map(genre => <GenreComponent genre={genre} page={page} movies={movies}/>)
+                genres.map(genre => <GenreComponent key={genre.id} genre={genre} page={page} id={id}/>)
             }
         </div>
     );

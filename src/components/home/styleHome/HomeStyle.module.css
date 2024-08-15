@@ -1,0 +1,47 @@
+.body{
+    color: white;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.MoviesBox{
+    display: flex;
+    flex-direction: column;
+}
+.allMovies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.title{
+    display: flex;
+    margin-left: 35px;
+}
+.h3{
+    margin: 20px 0 0 0;
+}
+
+.imgStar{
+    margin: 0;
+}
+.profilePersonImg{
+    border-radius: 50%;
+}
+.blockWithPeopleAndTitle{
+    display: flex;
+    flex-direction: column;
+}
+.blockWithPeople{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+.personName{
+    display: flex;
+    justify-content: center;
+}
+.onePersonBlock{
+    margin: 10px;
+}

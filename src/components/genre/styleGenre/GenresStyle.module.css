@@ -1,14 +1,33 @@
 .body{
     display: flex;
     flex-direction: column;
-    width: 30vw;
+    width: 48vw;
+    border: 2px solid #524f4f;
+    margin-top: 8.5px;
 }
 
 .oneGenre{
     margin: 5px;
 }
+.activeGenre{
+    margin: 5px;
+    color: red;
+    text-decoration: none;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
 
 .styleLinkGenre{
     color: white;
     text-decoration: none;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
+.styleLinkGenre:hover{
+     color: red;
+
+ }

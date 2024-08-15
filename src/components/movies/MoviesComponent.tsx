@@ -13,8 +13,10 @@ const MoviesComponent: FC<IProps> = ({movies}) => {
     const searchParams = useSearchParams();
     const currentPage = parseInt(searchParams.get('page') || '1');
     return (
-        <div >
-            <div className={[styles.allMovies,styles.body].join(' ')}>
+        <div>
+            <div className={styles.h2Style}><h2>Movies for you</h2></div>
+
+            <div className={[styles.allMovies, styles.body].join(' ')}>
                 {
                     movies?.map(movie => <MovieComponent key={movie.id} movie={movie}/>)
                 }

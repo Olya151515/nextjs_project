@@ -1,5 +1,5 @@
 .bodyMovie{
-    background-color: #110e0e;
+    background-color: black;
     margin: 0;
 }
 .headerStyle{
@@ -15,11 +15,11 @@
 .allMovies{
     display: flex;
     flex-wrap: wrap;
-   justify-content: space-evenly;
+    justify-content: space-evenly;
 }
 .imgPoster{
     width: 15vw;
-    border-radius: 6px;
+    border-radius: 9px;
     webkit-box-shadow: 0px 0px 31px 5px rgba(34, 60, 80, 0.2);
     moz-box-shadow: 0px 0px 31px 5px rgba(34, 60, 80, 0.2);
     box-shadow: 0px 0px 31px 5px rgba(34, 60, 80, 0.2);
@@ -39,4 +39,17 @@
     display: flex;
     justify-content: center;
     color: #e75959;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.h2Style{
+    color: white;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    margin-left: 30px;
 }
