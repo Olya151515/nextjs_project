@@ -3,6 +3,8 @@ import {Inter} from "next/font/google";
 import "./globals.css";
 import HeaderComponent from "@/components/header/HeaderComponent";
 import styles from "/src/app/page.module.css";
+import {Provider} from "react-redux";
+import {store} from "@/redux/store/store";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -21,8 +23,11 @@ export default function RootLayout({children}: Readonly<PropType>) {
               rel="stylesheet"/>
       </head>
       <body className={styles.body}>
-      <HeaderComponent/>
-      {children}
+      <Provider store={store}>
+          <HeaderComponent/>
+          {children}
+      </Provider>
+
       </body>
       </html>
   );

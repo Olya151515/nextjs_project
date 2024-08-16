@@ -4,7 +4,6 @@ import Link from "next/link";
 import styles from "/src/components/header/styleHeader/HeaderStyle.module.css";
 import SearchComponent from "@/components/searchComponent/SearchComponent";
 import {usePathname} from "next/navigation";
-import {userIcon} from "@/constants/icons/icons";
 
 const HeaderComponent = () => {
 
@@ -19,6 +18,11 @@ const HeaderComponent = () => {
                     <li className={styles.liStyle}><div className={styles.searchDiv}><SearchComponent/></div>
                     </li>
                 </ul>
+                <div className={styles.styleBtnMode}>
+                    <div><button>mode</button>
+                    </div>
+
+                </div>
                 <img className={styles.styleImgUser} width="30" height="30"
                      src="https://img.icons8.com/ios-glyphs/30/FFFFFF/name.png" alt="name"/>
             </div>

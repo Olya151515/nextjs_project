@@ -3,6 +3,10 @@
     text-decoration: none;
     list-style: none;
 }
+.styleBtnMode{
+    display: flex;
+    align-items: center;
+}
 .headerStyle{
     display: flex;
     background-color: black;
@@ -14,7 +18,7 @@
     display: flex;
 }
 .styleImgUser{
-    margin: 20px 10px 10px 15vw;
+    margin: 20px 10px 10px 5vw;
 }
 .ulStyle{
     display: flex;
