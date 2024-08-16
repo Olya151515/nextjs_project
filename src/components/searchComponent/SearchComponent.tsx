@@ -14,7 +14,7 @@ const SearchComponent = () => {
     const handeKeyDown = (e) =>{
         if(e.key === 'Enter'){
             e.preventDefault();
-            route.push(`/movies/search?query=${encodeURIComponent(query)}`);
+            route.push(`/movies/search?query=${encodeURIComponent(query)}&page=1`);
         }
     }
     return (

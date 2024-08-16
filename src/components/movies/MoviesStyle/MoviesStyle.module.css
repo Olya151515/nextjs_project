@@ -5,7 +5,10 @@
 .headerStyle{
     background-color: #2c2b2b;
 }
-
+.styleMoviesWithPagination{
+    display: flex;
+    flex-direction: column;
+}
 .oneMovie{
     width: 15vw;
     height: 60vh;

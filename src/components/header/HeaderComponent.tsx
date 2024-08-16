@@ -9,7 +9,6 @@ import {userIcon} from "@/constants/icons/icons";
 const HeaderComponent = () => {
 
     let pathname = usePathname();
-    console.log(pathname);
     return (
         <div className={styles.headerStyle}>
             <div className={styles.liWithIconUser}>

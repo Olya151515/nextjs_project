@@ -9,7 +9,6 @@ type IProps ={
 }
 
 const PopularMoviesComponent:FC<IProps> = ({popularMovies}) => {
-    console.log(popularMovies);
     return (
         <div className={[styles.MoviesBox,styles.body].join(' ')}>
             <div className={styles.title}>

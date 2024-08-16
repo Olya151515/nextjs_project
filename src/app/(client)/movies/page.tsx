@@ -7,7 +7,7 @@ const Page = async ({searchParams}:any) => {
     let response:MovieResponse = await moviesService.getMovies(searchParams.page);
     return (
         <div>
-            <MoviesComponent movies={response.results}/>
+            <MoviesComponent movies={response.results} total_pages={response.total_pages}/>
         </div>
     );
 };

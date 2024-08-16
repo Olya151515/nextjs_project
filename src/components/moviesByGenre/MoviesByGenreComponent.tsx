@@ -5,13 +5,13 @@ import {IMovie} from "@/models/movies/IMovie";
 import MovieByGenreComponent from "@/components/moviesByGenre/MovieByGenreComponent";
 import styles from "/src/components/moviesByGenre/styleMoviesBygenre/StyleMoviesWithgenre.module.css";
 import {useSearchParams} from "next/navigation";
-import PaginationForMoviesComponent from "@/components/pagination/PaginationForMoviesComponent";
 import PaginationForGenresComponent from "@/components/pagination/PaginationForGenresComponent";
 
 type IProps = {
     movies:IMovie[],
+    totalPages:number
 }
-const MoviesByGenreComponent:FC<IProps> = ({movies}) => {
+const MoviesByGenreComponent:FC<IProps> = ({movies,totalPages}) => {
     const searchParams = useSearchParams();
     const currentPage = parseInt(searchParams.get('page') || '1');
     const currentId = parseInt(searchParams.get('id') || '28');
@@ -23,7 +23,7 @@ const MoviesByGenreComponent:FC<IProps> = ({movies}) => {
                 {movies?.map(movie => <MovieByGenreComponent key={movie.id} movie={movie}/>)}
             </div>
            <div className={styles.stylePagination}>
-              <PaginationForGenresComponent totalPages={3726323} currentPage={currentPage} genreId={currentId}/>
+              <PaginationForGenresComponent totalPages={totalPages} typeOfData={'moviesByGenre'} currentPage={currentPage} genreId={currentId}/>
            </div>
         </div>
     );

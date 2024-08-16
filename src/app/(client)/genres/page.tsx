@@ -9,11 +9,10 @@ const Page = async ({searchParams}:any) => {
     let responseGenres:IGenre[] = await genres.getGenres();
     let responseMoviesByGenre = await moviesService.getMoviesByGenreId(searchParams.id ||'28',searchParams.page ||'1');
 
-
     return (
         <div  className={styles.boxMoviesByGenre}>
             <GenresComponent genres={responseGenres} page={searchParams.page} id={searchParams.id}/>
-            <MoviesByGenreComponent movies={responseMoviesByGenre.results} currentPage={searchParams.page}/>
+            <MoviesByGenreComponent totalPages={responseMoviesByGenre.total_pages} movies={responseMoviesByGenre.results} currentPage={searchParams.page}/>
         </div>
     );
 };

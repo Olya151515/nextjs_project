@@ -1,0 +1,19 @@
+.mainDiv{
+    display: flex;
+}
+.buttonStyle{
+    background-color: black;
+    border: none;
+}
+.styleCurrentPage{
+    margin: 0 10px 4px 10px;
+    width: 2vw;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    border-radius: 3px;
+}
+.buttonPagination{
+    margin: 0 7px 0 7px;
+}

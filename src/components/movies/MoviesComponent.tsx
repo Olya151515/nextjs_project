@@ -7,9 +7,10 @@ import MovieComponent from "@/components/movies/MovieComponent";
 import styles from "/src/components/movies/MoviesStyle/MoviesStyle.module.css";
 
 type IProps = {
-    movies: IMovie[]
+    movies: IMovie[],
+    total_pages:number
 }
-const MoviesComponent: FC<IProps> = ({movies}) => {
+const MoviesComponent: FC<IProps> = ({movies,total_pages}) => {
     const searchParams = useSearchParams();
     const currentPage = parseInt(searchParams.get('page') || '1');
     return (
@@ -22,7 +23,7 @@ const MoviesComponent: FC<IProps> = ({movies}) => {
                 }
             </div>
             <div className={styles.paginationStyle}>
-                <PaginationForMoviesComponent currentPage={currentPage} totalPages={10202}/>
+                <PaginationForMoviesComponent currentPage={currentPage} totalPages={total_pages} typeOfData={'movies'}/>
             </div>
 
         </div>

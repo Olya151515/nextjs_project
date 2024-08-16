@@ -28,10 +28,14 @@
 .profilePersonImg{
     border-radius: 50%;
 }
+.mainBlockPeople{
+    display: flex;
+    justify-content: center;
+}
 .blockWithPeopleAndTitle{
     display: flex;
+    justify-content: center;
     flex-direction: column;
-
 }
 .blockWithPeople{
     width: 77vw;
