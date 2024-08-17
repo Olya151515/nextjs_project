@@ -1,5 +1,11 @@
 .bodyMovie{
     background-color: black;
+    color: white;
+    margin: 0;
+}
+.whiteBody{
+    background-color: white;
+    color: black;
     margin: 0;
 }
 .headerStyle{
@@ -33,11 +39,11 @@
     transition: 1.5s ;
 }
 .paginationStyle{
-    margin: 20px;
+    margin: 20px 0 0 0;
     display: flex;
     justify-content: center;
-
 }
+
 .titleMovie{
     display: flex;
     justify-content: center;
@@ -47,7 +53,9 @@
     font-weight: 400;
     font-style: normal;
 }
-
+.h2{
+    margin: 0 0 0 2.7vw;
+}
 .h2Style{
     color: white;
     font-family: "Quicksand", sans-serif;

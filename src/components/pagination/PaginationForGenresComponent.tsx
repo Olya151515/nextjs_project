@@ -2,6 +2,7 @@ import React, {FC} from 'react';
 import Link from "next/link";
 import styles from "/src/components/pagination/stylePagination/stylePagination.module.css";
 import {decrementSearchParams, incrementSearchParams, pagination} from "@/services/pagination.service";
+import {RootState, useAppSelector} from "@/hooks/reduxHooks";
 type IProps = {
     totalPages:number,
     currentPage:number,
@@ -10,15 +11,19 @@ type IProps = {
 }
 
 const PaginationForGenresComponent:FC<IProps> = ({totalPages,currentPage,genreId,typeOfData}) => {
+
+    const isDarkTheme = useAppSelector((state: RootState) => state.theme.isDarkTheme);
+    const rightIconPagination = isDarkTheme? "https://img.icons8.com/ios/50/FFFFFF/circled-chevron-right--v1.png":"https://img.icons8.com/ios/50/1A1A1A/circled-chevron-right--v1.png"
+    const leftIconPagination = isDarkTheme? "https://img.icons8.com/ios/50/FFFFFF/circled-chevron-left.png":"https://img.icons8.com/ios/50/1A1A1A/circled-chevron-left.png"
     return (
         <div className={styles.mainDiv}>
             <div className={styles.buttonPagination}>
                 <button
                     disabled={pagination.isDisabledDec(totalPages,currentPage,typeOfData)}
-                    className={styles.buttonStyle}
+                    className={isDarkTheme?styles.buttonStyle:styles.buttonStyleWhite}
                 >
                     <Link href={`?id=${genreId}&page=${decrementSearchParams(currentPage ,totalPages, 'moviesByGenre')}`}>
-                        <img width="40" height="40" src="https://img.icons8.com/ios/50/FFFFFF/circled-chevron-left.png"
+                        <img width="40" height="40" src={leftIconPagination}
                              alt="circled-chevron-left"/>
                     </Link>
                 </button>
@@ -30,11 +35,11 @@ const PaginationForGenresComponent:FC<IProps> = ({totalPages,currentPage,genreId
             <div className={styles.buttonPagination}>
                 <button
                     disabled={pagination.isDisabledDec(totalPages,currentPage,typeOfData)}
-                    className={styles.buttonStyle}
+                    className={isDarkTheme?styles.buttonStyle:styles.buttonStyleWhite}
                 >
                     <Link href={`?id=${genreId}&page=${incrementSearchParams(currentPage ,totalPages, 'moviesByGenre')}`}>
                         <img width="40" height="40"
-                             src="https://img.icons8.com/ios/50/FFFFFF/circled-chevron-right--v1.png"
+                             src={rightIconPagination}
                              alt="circled-chevron-right--v1"/>
                     </Link>
                 </button>

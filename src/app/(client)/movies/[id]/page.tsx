@@ -7,9 +7,8 @@ const Page = async ({searchParams}:any) => {
     let movie:IMovie = JSON.parse(searchParams.data);
     let movieDetails = await moviesService.getDetailsOfMovieById(movie.id);
     let similarMovies = await moviesService.getSimilarMoviesById(movie.id);
-    console.log(similarMovies);
     return (
-        <div className={styles.body}>
+        <div>
             <MovieDescComponent movie={movie} genres={movieDetails.genres} runtime={movieDetails.runtime} similarMovies={similarMovies.results}/>
         </div>
     );

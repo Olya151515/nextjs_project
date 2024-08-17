@@ -2,6 +2,15 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    background-color: black;
+    color: white;
+}
+.mainDivWhite{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: white;
+    color :black;
 }
 .oneCard{
     width: 17vw;
@@ -11,6 +20,14 @@
     color: white;
     margin: 10px;
 }
+/*.oneCardWhiteTheme{*/
+/*    width: 17vw;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    height: 30vw;*/
+/*    color: black;*/
+/*    margin: 10px;*/
+/*}*/
 .img{
     width: 200px;
 }
@@ -26,5 +43,12 @@
 .stylePagination{
     display: flex;
     justify-content: center;
-    margin: 10px;
+    background-color: black;
+    color: white;
+}
+.whiteStylePagination{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    color: black;
 }

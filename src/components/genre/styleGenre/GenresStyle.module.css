@@ -3,7 +3,14 @@
     flex-direction: column;
     width: 48vw;
     border: 2px solid #524f4f;
-    margin-top: 8.5px;
+    background-color: black;
+}
+.whiteBody{
+    display: flex;
+    flex-direction: column;
+    width: 48vw;
+    border: 1px solid #524f4f;
+    background-color: white;
 }
 
 .oneGenre{
@@ -15,7 +22,7 @@
     text-decoration: none;
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
 }
 
@@ -24,10 +31,20 @@
     text-decoration: none;
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
+}
+.whiteThemeLink{
+    color: black;
+    text-decoration: none;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.whiteThemeLink:hover{
+    color: red;
 }
 .styleLinkGenre:hover{
      color: red;
-
  }

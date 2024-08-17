@@ -1,7 +1,27 @@
 .body{
   background-color: black;
-  margin: 0;
   color: #f1eaea;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.whiteBody{
+  background-color: white;
+  margin: 0;
+  color: black;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.mainBody{
+  margin: 0;
+}
+.whiteTheme{
+  background-color: white;
+  margin: 0;
+  color: black;
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -13,6 +33,22 @@
 .ContainerInfoMovie{
   display: flex;
   flex-direction: column;
+  background-color: black;
+  color: #f1eaea;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.ContainerInfoMovieWhite{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  color: black;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 .movieAllDescWithPoster{
   display: flex;
@@ -56,6 +92,13 @@
 .linkGenre{
   text-decoration: none;
   color: white;
+}
+.linkGenreWhite{
+  text-decoration: none;
+  color: black;
+}
+.linkGenreWhite:hover{
+  color: red;
 }
 .linkGenre:hover{
   color: red

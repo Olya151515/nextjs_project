@@ -2,12 +2,13 @@
 import React, {useState} from 'react';
 import styles from "/src/components/header/styleHeader/HeaderStyle.module.css";
 import {useRouter} from "next/navigation";
-import {search, whiteSearch} from "@/constants/icons/icons";
+import {RootState, useAppSelector} from "@/hooks/reduxHooks";
 
 const SearchComponent = () => {
     const [query, setQuery] = useState<string>('');
-
-    const route = useRouter()
+    const isDarkTheme = useAppSelector((state: RootState) => state.theme.isDarkTheme)
+    const route = useRouter();
+    const iconSearch:string = isDarkTheme? "https://img.icons8.com/ios-filled/50/FFFFFF/search.png" : "https://img.icons8.com/ios-filled/50/1A1A1A/search--v1.png"
     const handlerInputChange = (e) => {
         setQuery(e.target.value);
     }
@@ -20,11 +21,11 @@ const SearchComponent = () => {
     return (
         <div className={styles.inputBox}>
             <div>
-                <img width="24" height="24" src="https://img.icons8.com/material/24/FFFFFF/search--v1.png"
+                <img width="24" height="24" src={iconSearch}
                      alt="search--v1"/>
             </div>
             <input
-                className={styles.inputStyle}
+                className={isDarkTheme? styles.inputStyle : styles.inputWhite}
                 type="text" placeholder={'search...'}
                 value={query}
                 onChange={handlerInputChange}

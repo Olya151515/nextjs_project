@@ -1,3 +1,22 @@
+.whiteTheme{
+    background-color: white;
+}
+.liWhiteTheme{
+    margin:10px;
+    color: black;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.blackLine{
+    background-color: black;
+}
+.whiteLine{
+    background-color: white;
+}
 .active{
     color: red;
     text-decoration: none;
@@ -16,6 +35,11 @@
 }
 .liWithIconUser{
     display: flex;
+    background-color: black;
+}
+.liWithUserWhite{
+    display: flex;
+    background-color: white;
 }
 .styleImgUser{
     margin: 20px 10px 10px 5vw;
@@ -31,17 +55,25 @@
     list-style: none;
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
 }
 .liStyle:hover{
     color: red;
 }
 .inputStyle{
-    height: 4vh;
+    height: 3.5vh;
     background-color: black;
-    border: none;
+    border: 2px solid white;
+    border-radius: 4px;
     color: white;
+}
+.inputWhite{
+    height: 3.5vh;
+    background-color: white;
+    color: white;
+    border: 2px solid black;
+    border-radius: 4px;
 }
 
 .inputBox{

@@ -1,3 +1,4 @@
+'use client'
 import React, {FC} from 'react';
 import {IMovie} from "@/models/movies/IMovie";
 import {IGenre} from "@/models/genres/IGenre";
@@ -6,6 +7,7 @@ import {urlPoster} from "@/constants/urls/urls";
 import Link from "next/link";
 import {timeIcon} from "@/constants/icons/icons";
 import MovieComponent from "@/components/movies/MovieComponent";
+import {RootState, useAppSelector} from "@/hooks/reduxHooks";
 
 type IProps ={
     movie:IMovie,
@@ -14,8 +16,10 @@ type IProps ={
     similarMovies:IMovie[]
 }
 const MovieDescComponent:FC<IProps> = ({movie,genres,runtime,similarMovies}) => {
+    const isDarkTheme = useAppSelector((state: RootState) => state.theme.isDarkTheme);
+
     return (
-        <div className={styles.ContainerInfoMovie}>
+        <div className={isDarkTheme?styles.ContainerInfoMovie:styles.ContainerInfoMovieWhite}>
             <div className={styles.titleMovie}>
                 <h1 >The movie </h1> <h1 className={styles.nameMovie}> {movie.title}</h1>
             </div>
@@ -31,7 +35,7 @@ const MovieDescComponent:FC<IProps> = ({movie,genres,runtime,similarMovies}) => 
                     <div className={styles.blockDescTwo}>
                         <h3>{movie.release_date}</h3>
                         <h3>{movie.vote_average}</h3>
-                        <h3 className={styles.genreStyleBlock}>{genres.map(genre => <div key={genre.id} className={styles.oneGenre}><Link className={styles.linkGenre} href={'/genres?id='+genre.id}>{genre.name}</Link></div>)}</h3>
+                        <h3 className={styles.genreStyleBlock}>{genres.map(genre => <div key={genre.id} className={styles.oneGenre}><Link className={isDarkTheme?styles.linkGenre:styles.linkGenreWhite} href={'/genres?id='+genre.id}>{genre.name}</Link></div>)}</h3>
                         <h3 className={styles.iconTimeBlock}><img className={styles.imgIcon}  src={timeIcon} alt="timePthoto"/>   { runtime} minutes</h3>
                         <h4>{movie.overview}</h4>
                     </div>
