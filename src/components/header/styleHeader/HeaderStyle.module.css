@@ -8,7 +8,7 @@
     list-style: none;
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 500;
+    font-weight: 600;
     font-style: normal;
 }
 .blackLine{
@@ -55,7 +55,7 @@
     list-style: none;
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 500;
+    font-weight: 600;
     font-style: normal;
 }
 .liStyle:hover{
@@ -71,7 +71,7 @@
 .inputWhite{
     height: 3.5vh;
     background-color: white;
-    color: white;
+    color: black;
     border: 2px solid black;
     border-radius: 4px;
 }
@@ -82,4 +82,25 @@
 .searchIcon{
     width: 10px;
     height: 10px;
+}
+
+.styleBtnTheme{
+    background-color: black;
+    border: none;
+}
+.styleBtnThemeWhite{
+    background-color: white;
+    border: none;
+}
+
+.blockIcons{
+    display: flex;
+    justify-content: center;
+    height: 5vw;
+    width: 10vw;
+    align-items: center;
+    margin: 3vh 0 10px 13vw;
+}
+.userIcon{
+    margin:0 0.5vw 0 1vw
 }

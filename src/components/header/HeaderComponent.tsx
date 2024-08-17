@@ -18,6 +18,7 @@ const HeaderComponent = () => {
 
     const iconUSer = isDarkTheme? "https://img.icons8.com/ios-glyphs/30/FFFFFF/name.png" : "https://img.icons8.com/ios-glyphs/30/1A1A1A/name.png"
 
+    const iconTheme = isDarkTheme?"https://img.icons8.com/pastel-glyph/64/FFFFFF/light--v1.png":"https://img.icons8.com/external-android-line-2px-amoghdesign/24/1A1A1A/external-dark-multimedia-line-24px-android-line-2px-amoghdesign.png";
     return (
         <div className={ isDarkTheme? styles.headerStyle : styles.whiteTheme}>
             <div className={ isDarkTheme?styles.liWithIconUser:styles.liWithUserWhite}>
@@ -35,19 +36,28 @@ const HeaderComponent = () => {
                         <div className={styles.searchDiv}><SearchComponent/></div>
                     </li>
                 </ul>
-                <div className={styles.styleBtnMode}>
-                    <div>
-                        <button
-                            onClick={handleToggle}
-                        >mode
-                        </button>
-                    </div>
 
+                <div className={styles.blockIcons}>
+                    <div className={isDarkTheme?styles.styleBtnMode:styles.styleBtnThemeWhite}>
+                            <button
+                                onClick={handleToggle}
+                                className={isDarkTheme?styles.styleBtnTheme:styles.styleBtnThemeWhite}
+                            ><img width="30" height="30"
+                                  src={iconTheme}
+                                  alt="light--v1"/>
+                            </button>
+                    </div>
+                    <div className={styles.userIcon}>
+                        <img width="30" height="30"
+                             src={iconUSer} alt="user"/>
+                    </div>
                 </div>
-                <img className={styles.styleImgUser} width="30" height="30"
-                     src={iconUSer} alt="user"/>
+
+
             </div>
-            <div className={isDarkTheme?styles.blackLine:styles.whiteLine}>
+
+
+            <div className={isDarkTheme ? styles.blackLine : styles.whiteLine}>
                 <hr/>
             </div>
 
