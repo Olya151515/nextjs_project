@@ -23,7 +23,7 @@ const HeaderComponent = () => {
             <div className={ isDarkTheme?styles.liWithIconUser:styles.liWithUserWhite}>
                 <ul className={styles.ulStyle}>
                     <li className={ isDarkTheme? styles.liStyle : styles.liWhiteTheme}><Link
-                        className={pathname === '/home' ? styles.active : isDarkTheme? styles.liStyle : styles.liWhiteTheme} href={'/home'}>home</Link>
+                        className={pathname === '/' ? styles.active : isDarkTheme? styles.liStyle : styles.liWhiteTheme} href={'/'}>home</Link>
                     </li>
                     <li className={ isDarkTheme? styles.liStyle : styles.liWhiteTheme}><Link
                         className={pathname === '/movies' ? styles.active : isDarkTheme? styles.liStyle : styles.liWhiteTheme}
