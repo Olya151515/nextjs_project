@@ -16,7 +16,7 @@
     flex-direction: column;
 }
 .oneMovie{
-    width: 15vw;
+    width: 16vw;
     height: 60vh;
     margin: 20px;
     flex-direction: column;
@@ -64,3 +64,9 @@
     font-style: normal;
     margin-left: 30px;
 }
+
+.ratingStyle{
+    display: flex;
+    margin: 5px;
+}
+

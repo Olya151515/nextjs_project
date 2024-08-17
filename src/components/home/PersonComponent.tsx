@@ -1,7 +1,8 @@
 import React, {FC} from 'react';
 import {IPeople} from "@/models/people/IPeople";
-import {urlProfilePerson, urlsApi} from "@/constants/urls/urls";
+import {urlProfilePerson} from "@/constants/urls/urls";
 import styles from "/src/components/home/styleHome/HomeStyle.module.css";
+
 type IProps = {
     person:IPeople
 }

@@ -3,6 +3,7 @@ import {IMovie} from "@/models/movies/IMovie";
 import styles from "/src/components/movies/MoviesStyle/MoviesStyle.module.css";
 import {urlPoster} from "@/constants/urls/urls";
 import Link from "next/link";
+import RatingComponent from "@/components/rating/RatingComponent";
 type IProps ={
     movie:IMovie
 }
@@ -15,6 +16,9 @@ const MovieComponent:FC<IProps> = ({movie}) => {
             </div>
             <div className={styles.titleMovie}>
                 {movie.title}
+            </div>
+            <div className={styles.ratingStyle}>
+                <RatingComponent rating={movie.vote_average}/>
             </div>
         </div>
     );

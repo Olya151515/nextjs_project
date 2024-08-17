@@ -41,18 +41,21 @@
 .profilePersonImg{
     border-radius: 50%;
 }
+/*.profilePersonImg:hover{*/
+/*    width: 18vw;*/
+/*    transition: 1.5s ;*/
+/*}*/
 .mainBlockPeople{
     display: flex;
     justify-content: center;
 }
 .blockWithPeopleAndTitle{
-
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 .blockWithPeople{
-    width: 77vw;
+    width: 88vw;
     display: flex;
     flex-wrap: wrap;
     justify-content:space-between;
@@ -63,5 +66,5 @@
     justify-content: center;
 }
 .onePersonBlock{
-    margin: 10px;
+    margin: 25px;
 }

@@ -8,6 +8,7 @@ import Link from "next/link";
 import {timeIcon} from "@/constants/icons/icons";
 import MovieComponent from "@/components/movies/MovieComponent";
 import {RootState, useAppSelector} from "@/hooks/reduxHooks";
+import RatingComponent from "@/components/rating/RatingComponent";
 
 type IProps ={
     movie:IMovie,
@@ -34,7 +35,7 @@ const MovieDescComponent:FC<IProps> = ({movie,genres,runtime,similarMovies}) => 
                     </div>
                     <div className={styles.blockDescTwo}>
                         <h3>{movie.release_date}</h3>
-                        <h3>{movie.vote_average}</h3>
+                        <h3><RatingComponent rating={movie.vote_average}/></h3>
                         <h3 className={styles.genreStyleBlock}>{genres.map(genre => <div key={genre.id} className={styles.oneGenre}><Link className={isDarkTheme?styles.linkGenre:styles.linkGenreWhite} href={'/genres?id='+genre.id}>{genre.name}</Link></div>)}</h3>
                         <h3 className={styles.iconTimeBlock}><img className={styles.imgIcon}  src={timeIcon} alt="timePthoto"/>   { runtime} minutes</h3>
                         <h4>{movie.overview}</h4>

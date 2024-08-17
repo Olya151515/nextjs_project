@@ -1,5 +1,5 @@
 .whiteTheme{
-    background-color: white;
+    background-color: whitesmoke;
 }
 .liWhiteTheme{
     margin:10px;
@@ -15,7 +15,8 @@
     background-color: black;
 }
 .whiteLine{
-    background-color: white;
+    background-color: whitesmoke;
+    margin: 0;
 }
 .active{
     color: red;
@@ -29,7 +30,7 @@
 .headerStyle{
     display: flex;
     background-color: black;
-    height: 12vh;
+    height: 11vh;
     margin-bottom: 30px;
     flex-direction: column;
 }
@@ -39,7 +40,7 @@
 }
 .liWithUserWhite{
     display: flex;
-    background-color: white;
+    background-color: whitesmoke;
 }
 .styleImgUser{
     margin: 20px 10px 10px 5vw;
@@ -89,7 +90,7 @@
     border: none;
 }
 .styleBtnThemeWhite{
-    background-color: white;
+    background-color: whitesmoke;
     border: none;
 }
 
