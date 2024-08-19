@@ -28,7 +28,6 @@ export const pagination ={
                 return isDisabled
             }
         }
-        console.log(isDisabled);
     },
     isDisabledInc: (totalPages:number,currentPage:number,typeOfData:string) =>{
         let isDisabled = false;
@@ -49,6 +48,5 @@ export const pagination ={
                 return isDisabled
             }
         }
-        console.log(isDisabled);
     }
 }

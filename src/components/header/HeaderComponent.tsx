@@ -24,14 +24,14 @@ const HeaderComponent = () => {
             <div className={ isDarkTheme?styles.liWithIconUser:styles.liWithUserWhite}>
                 <ul className={styles.ulStyle}>
                     <li className={ isDarkTheme? styles.liStyle : styles.liWhiteTheme}><Link
-                        className={pathname === '/' ? styles.active : isDarkTheme? styles.liStyle : styles.liWhiteTheme} href={'/'}>home</Link>
+                        className={pathname === '/' ? styles.active : isDarkTheme? styles.liStyle : styles.liWhiteTheme} href={'/'}>Home</Link>
                     </li>
                     <li className={ isDarkTheme? styles.liStyle : styles.liWhiteTheme}><Link
                         className={pathname === '/movies' ? styles.active : isDarkTheme? styles.liStyle : styles.liWhiteTheme}
-                        href={'/movies?page=1'}>movies</Link></li>
+                        href={'/movies?page=1'}>Movies</Link></li>
                     <li className={ isDarkTheme? styles.liStyle : styles.liWhiteTheme}><Link
                         className={pathname === '/genres' ? styles.active : isDarkTheme? styles.liStyle : styles.liWhiteTheme}
-                        href={'/genres?id=28'}>genres</Link></li>
+                        href={'/genres?id=28'}>Genres</Link></li>
                     <li className={styles.liStyle}>
                         <div className={styles.searchDiv}><SearchComponent/></div>
                     </li>
@@ -52,11 +52,7 @@ const HeaderComponent = () => {
                              src={iconUSer} alt="user"/>
                     </div>
                 </div>
-
-
             </div>
-
-
             <div className={isDarkTheme ? styles.blackLine : styles.whiteLine}>
                 <hr/>
             </div>

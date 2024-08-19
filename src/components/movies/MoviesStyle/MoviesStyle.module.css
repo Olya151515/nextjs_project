@@ -46,7 +46,7 @@
 
 .titleMovie{
     display: flex;
-    justify-content: center;
+    justify-content: start;
     color: #e75959;
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;

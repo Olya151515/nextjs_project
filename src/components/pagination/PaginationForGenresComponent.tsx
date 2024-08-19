@@ -22,7 +22,7 @@ const PaginationForGenresComponent:FC<IProps> = ({totalPages,currentPage,genreId
                     disabled={pagination.isDisabledDec(totalPages,currentPage,typeOfData)}
                     className={isDarkTheme?styles.buttonStyle:styles.buttonStyleWhite}
                 >
-                    <Link href={`?id=${genreId}&page=${decrementSearchParams(currentPage ,totalPages, 'moviesByGenre')}`}>
+                    <Link href={`?id=${genreId}&page=${currentPage}`}>
                         <img width="40" height="40" src={leftIconPagination}
                              alt="circled-chevron-left"/>
                     </Link>
@@ -37,7 +37,7 @@ const PaginationForGenresComponent:FC<IProps> = ({totalPages,currentPage,genreId
                     disabled={pagination.isDisabledDec(totalPages,currentPage,typeOfData)}
                     className={isDarkTheme?styles.buttonStyle:styles.buttonStyleWhite}
                 >
-                    <Link href={`?id=${genreId}&page=${incrementSearchParams(currentPage ,totalPages, 'moviesByGenre')}`}>
+                    <Link href={`?id=${genreId}&page=${currentPage}`}>
                         <img width="40" height="40"
                              src={rightIconPagination}
                              alt="circled-chevron-right--v1"/>
